@@ -75,30 +75,30 @@ public class hotelData_stub implements hotelData{
 	@Override
 	public boolean updataOrder(String orderID, orderPO OR) {
 		// TODO Auto-generated method stub
-		System.out.println("¶©µ¥¸üĞÂ³É¹¦");
+		System.out.println("è®¢å•æ›´æ–°æˆåŠŸ");
 		return true;
 	}
 
 	@Override
-	public boolean updataHotelInformat(hotelPO po) {
+	public boolean updataHotelInformat(String hotelID,hotelPO po) {
 		// TODO Auto-generated method stub
-		System.out.println("¾ÆµêĞÅÏ¢¸üĞÂ³É¹¦");
+		System.out.println("é…’åº—ä¿¡æ¯æ›´æ–°æˆåŠŸ");
 		return true;
 	}
 
 	@Override
-	public boolean check(String orderID, String memberID, roomPO RO,int mark) {
+	public boolean check(String orderID, String memberID, String roomID,roomPO RO,int mark) {
 		// TODO Auto-generated method stub
 		if(mark==1){
-			System.out.println("Èë×¡³É¹¦");
+			System.out.println("å…¥ä½æˆåŠŸ");
 			return true;
 		}
 		else if(mark==0){
-			System.out.println("ÍË·¿³É¹¦");
+			System.out.println("é€€æˆ¿æˆåŠŸ");
 			return true;
 		}
 		else{
-			System.out.println("²Ù×÷Ê§°Ü");
+			System.out.println("æ“ä½œå¤±è´¥");
 			return false;
 		}
 	}

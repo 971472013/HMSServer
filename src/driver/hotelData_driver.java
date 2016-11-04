@@ -1,6 +1,5 @@
 package driver;
 
-import blservice.hotelblservice;
 import dataservice.hotelData;
 import po.hotelPO;
 import po.orderPO;
@@ -46,7 +45,7 @@ public class hotelData_driver {
 	public static void main(String[] args) {
 		
 		hotelData H=new hotelData_stub(memberID, name, level, address, district, credit, phone, checkInTime, checkOutTime, roomType, roomNumber, promotion, discount, price);
-		hotelDataDrive drive=new hotelDataDrive();
+		hotelData_driver drive=new hotelData_driver();
 		drive.drive(H);
 		
 	}
