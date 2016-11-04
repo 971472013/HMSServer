@@ -1,10 +1,9 @@
 package driver;
 
-import data.orderData;
 import po.orderPO;
 import stub.orderData_stub;
 
-public class orderbl_driver {
+public class orderData_driver {
 	orderData_stub service = new orderData_stub();
 	public void getUser() {
 		// TODO Auto-generated method stub

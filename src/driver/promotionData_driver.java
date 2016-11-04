@@ -1,10 +1,9 @@
 package driver;
 
-import blservice.promotionblservice;
 import po.promotionPO;
 import stub.promotionData_stub;
 
-public class promotionbl_driver implements promotionblservice{
+public class promotionData_driver{
 	dataservice.promotionData service = new promotionData_stub();
 	public void getUser() {
 		// TODO Auto-generated method stub
@@ -12,13 +11,11 @@ public class promotionbl_driver implements promotionblservice{
 		System.out.println("成功得到订单");
 	}
 
-	@Override
 	public promotionPO getPromotion(String promotionID) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public promotionPO[] getPromotionList() {
 		// TODO Auto-generated method stub
 		return null;
