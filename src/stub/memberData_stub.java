@@ -30,7 +30,7 @@ public class memberData_stub implements memberData {
 	@Override
 	public boolean saveMInformation(String memberID, memberPO M) {
 		// TODO Auto-generated method stub
-		System.out.println("用户信息保存成功");
+		System.out.println("鐢ㄦ埛淇℃伅淇濆瓨鎴愬姛");
 		return true;
 	}
 

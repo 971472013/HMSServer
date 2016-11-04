@@ -23,7 +23,7 @@ public class memberData_driver {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		memberDate_drive drive =new memberDate_drive();
+		memberData_driver drive =new memberData_driver();
 		drive.drive(new memberPO(memberID, name, level, credit, phone));
 	}
 
