@@ -5,7 +5,7 @@ import stub.orderData_stub;
 
 public class orderData_driver {
 	orderData_stub service = new orderData_stub();
-	public void getUser() {
+	public void getOrder() {
 		// TODO Auto-generated method stub
 		service.getOrder("541322049");
 		System.out.println("成功得到订单");
@@ -38,7 +38,7 @@ public class orderData_driver {
 	}
 	
 	public static void main(String[] args) {
-		orderbl_driver driver = new orderbl_driver();
+		orderData_driver driver = new orderData_driver();
 		orderPO Order = new orderPO("1997-2-2", "1997-2-5", "大床房", 2, "无", 0, 450);
 		driver.addOrder(Order);
 		driver.getOrder();
@@ -48,8 +48,5 @@ public class orderData_driver {
 	}
 
 
-	private void getOrder() {
-		// TODO Auto-generated method stub
-		
-	}
+
 }
