@@ -18,7 +18,7 @@ public class roomData_driver {
 		// TODO Auto-generated method stub
 
 		roomPO room=new roomPO(true , 521, Room_Type.Normal, 250);
-		roomData_driver driver = new roomData_driver(room);
+		new roomData_driver(room);
 			
 	}
 

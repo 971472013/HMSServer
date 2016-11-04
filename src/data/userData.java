@@ -31,12 +31,6 @@ public class userData implements dataservice.userData {
 	}
 
 	@Override
-	public userPO[] getUserList(String limit) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public ArrayList<userPO> getList(String limit) {
 		// TODO Auto-generated method stub
 		return null;
