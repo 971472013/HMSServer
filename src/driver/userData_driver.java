@@ -5,7 +5,7 @@ import po.UserRole;
 import po.userPO;
 import stub.userData_stub;
 
-public class userbl_driver {
+public class userData_driver {
 
 
 	userData service = new userData_stub();
@@ -42,7 +42,7 @@ public class userbl_driver {
 	}
 	
 	public static void main(String[] args) {
-		userbl_driver driver = new userbl_driver();
+		userData_driver driver = new userData_driver();
 		userPO user = new userPO("1234", "1234", "xyj", UserRole.SALER);
 		driver.addUser(user);
 		driver.getUser();

@@ -3,11 +3,11 @@ package driver;
 import dataservice.searchData.searchHotelInfo;
 import stub.searchData_stub;
 
-public class searchdata_driver {
+public class searchData_driver {
 
 	searchData_stub search;
 	
-	public searchdata_driver(searchData_stub search) {
+	public searchData_driver(searchData_stub search) {
 		this.search = search;
 	}
 	
@@ -17,7 +17,7 @@ public class searchdata_driver {
 	}
 	
 	public static void main(String[] args) {
-		new searchdata_driver(new searchData_stub());
+		new searchData_driver(new searchData_stub());
 	}
 
 }
