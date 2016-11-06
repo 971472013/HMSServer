@@ -1,17 +1,17 @@
 package data;
 
-import po.roomPO;
+import po.RoomPO;
 
-public class roomData implements dataservice.roomData {
+public class RoomData implements dataservice.RoomDataService {
 
 	@Override
-	public roomPO getRoom(String ID) {
+	public RoomPO getRoom(String ID) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean updateRoom(roomPO room) {
+	public boolean updateRoom(RoomPO room) {
 		// TODO Auto-generated method stub
 		return false;
 	}

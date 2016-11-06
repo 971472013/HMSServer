@@ -2,8 +2,7 @@ package po;
 
 import java.io.Serializable;
 
-
-public class roomPO implements Serializable{
+public class RoomPO implements Serializable {
 
 	/**
 	 * 
@@ -11,10 +10,10 @@ public class roomPO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private boolean valid;
 	private int number;
-	private Room_Type type;
+	private RoomType type;
 	private int price;
 	
-	public roomPO(boolean valid, int number,Room_Type type,int price){
+	public RoomPO(boolean valid, int number,RoomType type,int price){
 		this.valid =valid;
 		this.number=number;
 		this.type=type;
@@ -29,15 +28,12 @@ public class roomPO implements Serializable{
 		return number;
 	}
 	
-	public Room_Type getRoomType(){
+	public RoomType getRoomType(){
 		return type;
 	}
 	
 	public int getPrice(){
 		return price;
 	}
-	
-	
-
 	
 }

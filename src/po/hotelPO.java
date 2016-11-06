@@ -1,18 +1,22 @@
 package po;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class hotelPO {
+public class HotelPO implements Serializable {
 
-	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String hotelID;
 	private String name;
 	private String address;
 	private String level;
 	private String district;
-	private ArrayList<roomPO> roomList;
+	private ArrayList<RoomPO> roomList;
 	
-	public hotelPO(String hotelID, String name, String address, String level, String district){
+	public HotelPO(String hotelID, String name, String address, String level, String district){
 		this.setHotelID(hotelID);
 		this.setName(name);
 		this.setAddress(address);
@@ -60,11 +64,12 @@ public class hotelPO {
 		this.district = district;
 	}
 	
-	public ArrayList<roomPO> getRoomList() {
+	public ArrayList<RoomPO> getRoomList() {
 		return roomList;
 	}
 	
-	public void setRoomList(ArrayList<roomPO> roomList) {
+	public void setRoomList(ArrayList<RoomPO> roomList) {
 		this.roomList = roomList;
 	}
+	
 }

@@ -1,14 +1,20 @@
 package po;
 
-public class memberPO {
+import java.io.Serializable;
+
+public class MemberPO implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String memberID;
 	private String name;
 	private String level;
 	private int credit;
 	private int phone;
 	
-	public memberPO(String memberID,String name,String level,int credit,int phone){
+	public MemberPO(String memberID,String name,String level,int credit,int phone){
 		this.setName(name);
 		this.setMemberID(memberID);
 		this.setLevel(level);
@@ -55,4 +61,5 @@ public class memberPO {
 	public void setPhone(int phone) {
 		this.phone = phone;
 	}
+	
 }

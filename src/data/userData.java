@@ -2,36 +2,36 @@ package data;
 
 import java.util.ArrayList;
 
-import po.userPO;
+import po.UserPO;
 
-public class userData implements dataservice.userData {
+public class UserData implements dataservice.UserDataService {
 
 	@Override
-	public boolean insert(userPO user) {
+	public boolean insert(UserPO user) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean delete(userPO user) {
+	public boolean delete(UserPO user) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean update(userPO user) {
+	public boolean update(UserPO user) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public userPO getUser(String ID) {
+	public UserPO getUser(String ID) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ArrayList<userPO> getList(String limit) {
+	public ArrayList<UserPO> getList(String limit) {
 		// TODO Auto-generated method stub
 		return null;
 	}

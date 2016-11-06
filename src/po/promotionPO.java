@@ -1,6 +1,13 @@
 package po;
 
-public class promotionPO {
+import java.io.Serializable;
+
+public class PromotionPO implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String birthday;
 	int roomNumber;
 	boolean coordinate;
@@ -8,7 +15,7 @@ public class promotionPO {
 	boolean VIP;
 	String district;
 	
-	public promotionPO(String b, int rn, boolean c, String da, boolean v, String di) {
+	public PromotionPO(String b, int rn, boolean c, String da, boolean v, String di) {
 		birthday=b;
 		roomNumber=rn;
 		coordinate=c;
@@ -16,26 +23,30 @@ public class promotionPO {
 		VIP=v;
 		district=di;
 	}
+	
 	public String getBirday(){
 		return birthday;
 	}
+	
 	public int getRoomNumber(){
 		return roomNumber;
 	}
+	
 	public boolean getCoordinate(){
 		return coordinate;
 	}
+	
 	public String getDate(){
 		return date;
 	}
+	
 	public boolean getVIP(){
 		return VIP;
 	}
+	
 	public String getDistrict(){
 		return district;
 	}
-	
-	
 	
 	public void setBirthday(String birthday){
 		this.birthday=birthday;
@@ -55,4 +66,5 @@ public class promotionPO {
 	public void setDistrict(String district){
 		this.district=district;
 	}
+	
 }

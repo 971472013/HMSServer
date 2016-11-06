@@ -2,7 +2,7 @@ package po;
 
 import java.io.Serializable;
 
-public class userPO implements Serializable{
+public class UserPO implements Serializable {
 
 	/**
 	 * 
@@ -13,7 +13,7 @@ public class userPO implements Serializable{
 	private String name;
 	private UserRole role;
 	
-	public userPO(String ID,String password,String name,UserRole role){
+	public UserPO(String ID,String password,String name,UserRole role){
 		this.ID=ID;
 		this.password=password;
 		this.name =name;
@@ -35,4 +35,5 @@ public class userPO implements Serializable{
 	public UserRole getUserRole(){
 		return role;
 	}
+	
 }

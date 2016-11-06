@@ -1,10 +1,16 @@
 package po;
 
-public class datePO {
+import java.io.Serializable;
+
+public class DatePO implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int year, month, day;
 
-	public datePO(int year, int month, int day) {
+	public DatePO(int year, int month, int day) {
 		this.year = year;
 		this.month = month;
 		this.day = day;
