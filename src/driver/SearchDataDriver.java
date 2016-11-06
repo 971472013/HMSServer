@@ -1,18 +1,18 @@
 package driver;
 
-import dataservice.searchData.searchHotelInfo;
-import stub.searchData_stub;
+import dataservice.SearchDataService.searchHotelInfo;
+import stub.SearchDataStub;
 
 /**
  * searchData的driver
  * @author CROFF
  * @version 2016-11-05 19:36
  */
-public class searchData_driver {
+public class SearchDataDriver {
 
-	searchData_stub search;
+	SearchDataStub search;
 	
-	public searchData_driver(searchData_stub search) {
+	public SearchDataDriver(SearchDataStub search) {
 		this.search = search;
 	}
 	
@@ -22,7 +22,7 @@ public class searchData_driver {
 	}
 	
 	public static void main(String[] args) {
-		new searchData_driver(new searchData_stub());
+		new SearchDataDriver(new SearchDataStub());
 	}
 
 }

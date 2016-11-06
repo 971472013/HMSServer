@@ -2,35 +2,35 @@ package stub;
 
 import java.util.ArrayList;
 
-import dataservice.userData;
+import dataservice.UserDataService;
 import po.UserRole;
-import po.userPO;
+import po.UserPO;
 
 
-public class userData_stub implements userData {
+public class UserDataStub implements UserDataService {
 
 	private String ID="541322049";
 	private String password="DREAMING";
 	private String name="zhangxinyue";
 	private UserRole role;
-	private ArrayList<userPO> list = new ArrayList<userPO>();
+	private ArrayList<UserPO> list = new ArrayList<UserPO>();
 	
-	public userData_stub () {
-		list.add(new userPO(ID, password, name, role));
+	public UserDataStub () {
+		list.add(new UserPO(ID, password, name, role));
 	}
 	@Override
-	public boolean insert(userPO user) {
+	public boolean insert(UserPO user) {
 		// TODO Auto-generated method stub
 		ID=user.getID();
 		password=user.getPassword();
 		name=user.getName();
 		role=user.getUserRole();
-		list.add(new userPO(ID, password, name, role));
+		list.add(new UserPO(ID, password, name, role));
 		return true;
 	}
 
 	@Override
-	public boolean delete(userPO user) {
+	public boolean delete(UserPO user) {
 		// TODO Auto-generated method stub
 		for(int i=0;i<list.size();i++){
 			if(list.get(i).getID().equals(user.getID())){
@@ -41,7 +41,7 @@ public class userData_stub implements userData {
 	}
 
 	@Override
-	public boolean update(userPO user) {
+	public boolean update(UserPO user) {
 		// TODO Auto-generated method stub
 		for(int i=0;i<list.size();i++){
 			if(list.get(i).getID().equals(user.getID())){
@@ -53,13 +53,13 @@ public class userData_stub implements userData {
 	}
 
 	@Override
-	public userPO getUser(String ID) {
+	public UserPO getUser(String ID) {
 		// TODO Auto-generated method stub
-		return new userPO(ID,password,name,role);
+		return new UserPO(ID,password,name,role);
 	}
 
 	@Override
-	public ArrayList<userPO> getList(String limit) {
+	public ArrayList<UserPO> getList(String limit) {
 		// TODO Auto-generated method stub
 		return list;
 	}

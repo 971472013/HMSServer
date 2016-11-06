@@ -1,33 +1,33 @@
 package driver;
 
-import po.orderPO;
-import stub.orderData_stub;
+import po.OrderPO;
+import stub.OrderDataStub;
 
-public class orderData_driver {
-	orderData_stub service = new orderData_stub();
+public class OrderDataDriver {
+	OrderDataStub service = new OrderDataStub();
 	public void getOrder() {
 		// TODO Auto-generated method stub
 		service.getOrder("541322049");
-		System.out.println("³É¹¦µÃµ½¶©µ¥");
+		System.out.println("ï¿½É¹ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½");
 	}
 
 	
-	public void updateOrder(orderPO user) {
+	public void updateOrder(OrderPO user) {
 		// TODO Auto-generated method stub
-		System.out.println("³É¹¦¸üÐÂ");
+		System.out.println("ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½");
 		System.out.println(service.update(user));
 	}
 
-	public void addOrder(orderPO user) {
+	public void addOrder(OrderPO user) {
 		// TODO Auto-generated method stub
-		System.out.println("³É¹¦Ìí¼Ó");
+		System.out.println("ï¿½É¹ï¿½ï¿½ï¿½ï¿½");
 		System.out.println(service.insert(user));
 	}
 
 	
-	public void deleteOrder(orderPO user) {
+	public void deleteOrder(OrderPO user) {
 		// TODO Auto-generated method stub
-		System.out.println("³É¹¦É¾³ý");
+		System.out.println("ï¿½É¹ï¿½É¾ï¿½ï¿½");
 		System.out.println(service.delete(user));
 	}
 
@@ -38,8 +38,8 @@ public class orderData_driver {
 	}
 	
 	public static void main(String[] args) {
-		orderData_driver driver = new orderData_driver();
-		orderPO Order = new orderPO("1997-2-2", "1997-2-5", "´ó´²·¿", 2, "ÎÞ", 0, 450);
+		OrderDataDriver driver = new OrderDataDriver();
+		OrderPO Order = new OrderPO("1997-2-2", "1997-2-5", "ï¿½ó´²·ï¿½", 2, "ï¿½ï¿½", 0, 450);
 		driver.addOrder(Order);
 		driver.getOrder();
 		driver.getList();

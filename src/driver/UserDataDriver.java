@@ -1,14 +1,14 @@
 package driver;
 
-import dataservice.userData;
+import dataservice.UserDataService;
 import po.UserRole;
-import po.userPO;
-import stub.userData_stub;
+import po.UserPO;
+import stub.UserDataStub;
 
-public class userData_driver {
+public class UserDataDriver {
 
 
-	userData service = new userData_stub();
+	UserDataService service = new UserDataStub();
 	public void getUser() {
 		// TODO Auto-generated method stub
 		service.getUser("541322049");
@@ -16,20 +16,20 @@ public class userData_driver {
 	}
 
 	
-	public void updateUser(userPO user) {
+	public void updateUser(UserPO user) {
 		// TODO Auto-generated method stub
 		System.out.println("---更新用户———");
 		System.out.println(service.update(user));
 	}
 
-	public void addUser(userPO user) {
+	public void addUser(UserPO user) {
 		// TODO Auto-generated method stub
 		System.out.println("---新增用户———");
 		System.out.println(service.insert(user));
 	}
 
 	
-	public void deleteUser(userPO user) {
+	public void deleteUser(UserPO user) {
 		// TODO Auto-generated method stub
 		System.out.println("---删除用户———");
 		System.out.println(service.delete(user));
@@ -42,8 +42,8 @@ public class userData_driver {
 	}
 	
 	public static void main(String[] args) {
-		userData_driver driver = new userData_driver();
-		userPO user = new userPO("1234", "1234", "xyj", UserRole.SALER);
+		UserDataDriver driver = new UserDataDriver();
+		UserPO user = new UserPO("1234", "1234", "xyj", UserRole.SALER);
 		driver.addUser(user);
 		driver.getUser();
 		driver.getList();

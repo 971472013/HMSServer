@@ -1,30 +1,30 @@
 package stub;
-import dataservice.orderData;
-import po.orderPO;
+import dataservice.OrderDataService;
+import po.OrderPO;
 
-public class orderData_stub implements orderData{
+public class OrderDataStub implements OrderDataService{
 	@Override
-	public boolean insert(orderPO Order) {
+	public boolean insert(OrderPO Order) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 	@Override
-	public boolean delete(orderPO Order) {
+	public boolean delete(OrderPO Order) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 	@Override
-	public boolean update(orderPO Order) {
+	public boolean update(OrderPO Order) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 	@Override
-	public orderPO getOrder(String orderID) {
+	public OrderPO getOrder(String orderID) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	@Override
-	public orderPO[] getOrderList(String OrderID) {
+	public OrderPO[] getOrderList(String OrderID) {
 		// TODO Auto-generated method stub
 		return null;
 	}

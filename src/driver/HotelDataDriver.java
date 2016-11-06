@@ -1,13 +1,13 @@
 package driver;
 
-import dataservice.hotelData;
-import po.hotelPO;
-import po.orderPO;
-import po.roomPO;
-import stub.hotelData_stub;
+import dataservice.HotelDataService;
+import po.HotelPO;
+import po.OrderPO;
+import po.RoomPO;
+import stub.HotelDataStub;
 
 
-public class hotelData_driver {
+public class HotelDataDriver {
 
 	static String hotelID="0111";
 	static String memberID="0011";
@@ -29,23 +29,23 @@ public class hotelData_driver {
 	static double price=10;
 	
 	static String roomID="0000";
-	static roomPO RO=new roomPO(true, 111, null,(int) price);
+	static RoomPO RO=new RoomPO(true, 111, null,(int) price);
 	
-	public void drive(hotelData H	){
+	public void drive(HotelDataService H	){
 		System.out.println(H.getHotelInformat(hotelID));
 		System.out.println(H.check(orderID, memberID, roomID, RO, 0));
 		System.out.println(H.getOrder(orderID));
 		System.out.println(H.getOrderList(hotelID, time));
 		System.out.println(H.getMInformation(memberID));
-		System.out.println(H.updataHotelInformat(hotelID, new hotelPO(hotelID, name, address, level, district)));
-		System.out.println(H.updataOrder(orderID, new orderPO(checkInTime, checkOutTime, roomType, roomNumber,
+		System.out.println(H.updataHotelInformat(hotelID, new HotelPO(hotelID, name, address, level, district)));
+		System.out.println(H.updataOrder(orderID, new OrderPO(checkInTime, checkOutTime, roomType, roomNumber,
 				promotion, discount, price)));
 	}
 	
 	public static void main(String[] args) {
 		
-		hotelData H=new hotelData_stub(memberID, name, level, address, district, credit, phone, checkInTime, checkOutTime, roomType, roomNumber, promotion, discount, price);
-		hotelData_driver drive=new hotelData_driver();
+		HotelDataService H=new HotelDataStub(memberID, name, level, address, district, credit, phone, checkInTime, checkOutTime, roomType, roomNumber, promotion, discount, price);
+		HotelDataDriver drive=new HotelDataDriver();
 		drive.drive(H);
 		
 	}

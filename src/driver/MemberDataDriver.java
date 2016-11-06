@@ -1,11 +1,11 @@
 package driver;
 
 
-import po.memberPO;
-import stub.memberData_stub;
+import po.MemberPO;
+import stub.MemberDataStub;
 
 
-public class memberData_driver {
+public class MemberDataDriver {
 
 	static String memberID="0001";
 	static String name="sadasd";
@@ -13,8 +13,8 @@ public class memberData_driver {
 	static int credit=5000;
 	static int phone=110;
 	
-	public void drive(memberPO M){
-		memberData_stub memberDate = new memberData_stub(memberID, name,  level, credit, phone);
+	public void drive(MemberPO M){
+		MemberDataStub memberDate = new MemberDataStub(memberID, name,  level, credit, phone);
 		System.out.println(memberDate.saveMInformation(memberID, M));
 		System.out.println(memberDate.getMInformation(memberID));
 		System.out.println(memberDate.getCreditList(memberID));
@@ -23,8 +23,8 @@ public class memberData_driver {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		memberData_driver drive =new memberData_driver();
-		drive.drive(new memberPO(memberID, name, level, credit, phone));
+		MemberDataDriver drive =new MemberDataDriver();
+		drive.drive(new MemberPO(memberID, name, level, credit, phone));
 	}
 
 }

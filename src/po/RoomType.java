@@ -1,6 +1,6 @@
 package po;
 
-public enum Room_Type {
+public enum RoomType {
 
 	Normal;
 }

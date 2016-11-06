@@ -2,17 +2,17 @@ package stub;
 
 import java.util.ArrayList;
 
-import dataservice.searchData;
+import dataservice.SearchDataService;
 import po.*;
 
-public class searchData_stub implements searchData {
+public class SearchDataStub implements SearchDataService {
 
-	private ArrayList<hotelPO> hotelList;
+	private ArrayList<HotelPO> hotelList;
 	
 	@Override
-	public ArrayList<hotelPO> getHotelList(String str, searchHotelInfo info) {
+	public ArrayList<HotelPO> getHotelList(String str, searchHotelInfo info) {
 		// TODO Auto-generated method stub
-		ArrayList<hotelPO> resultList = new ArrayList<hotelPO>();
+		ArrayList<HotelPO> resultList = new ArrayList<HotelPO>();
 		
 		if(info.equals(searchHotelInfo.ADDRESS)) {
 			for(int i=0; i<hotelList.size(); i++) {
@@ -31,7 +31,7 @@ public class searchData_stub implements searchData {
 	}
 
 	@Override
-	public ArrayList<roomPO> getRoomList(String hotelID) {
+	public ArrayList<RoomPO> getRoomList(String hotelID) {
 		// TODO Auto-generated method stub
 		for(int i=0; i<hotelList.size(); i++) {
 			if(hotelList.get(i).getHotelID().equals(hotelID)) {
@@ -41,11 +41,11 @@ public class searchData_stub implements searchData {
 		return null;
 	}
 
-	public ArrayList<hotelPO> getHotelList() {
+	public ArrayList<HotelPO> getHotelList() {
 		return hotelList;
 	}
 
-	public void setHotelList(ArrayList<hotelPO> hotelList) {
+	public void setHotelList(ArrayList<HotelPO> hotelList) {
 		this.hotelList = hotelList;
 	}
 

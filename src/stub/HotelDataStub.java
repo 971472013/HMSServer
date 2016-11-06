@@ -2,13 +2,13 @@ package stub;
 
 import java.util.ArrayList;
 
-import dataservice.hotelData;
-import po.hotelPO;
-import po.memberPO;
-import po.orderPO;
-import po.roomPO;
+import dataservice.HotelDataService;
+import po.HotelPO;
+import po.MemberPO;
+import po.OrderPO;
+import po.RoomPO;
 
-public class hotelData_stub implements hotelData{
+public class HotelDataStub implements HotelDataService{
 
 	String memberID;
 	String name;
@@ -25,7 +25,7 @@ public class hotelData_stub implements hotelData{
 	double discount;
 	double price;
 	
-	public hotelData_stub(String memberID,String name,String level,String address,
+	public HotelDataStub(String memberID,String name,String level,String address,
 			String district,int credit,int phone,String checkInTime,String checkOutTime,
 			String roomType,int roomNumber,String promotion,double discount,double price){
 		this.memberID=memberID;
@@ -45,49 +45,49 @@ public class hotelData_stub implements hotelData{
 	}
 	
 	@Override
-	public memberPO getMInformation(String memberID) {
+	public MemberPO getMInformation(String memberID) {
 		// TODO Auto-generated method stub
-		return new memberPO(memberID,name,level,credit,phone);
+		return new MemberPO(memberID,name,level,credit,phone);
 	}
 
 	@Override
-	public ArrayList<orderPO> getOrderList(String hotelID, String time) {
+	public ArrayList<OrderPO> getOrderList(String hotelID, String time) {
 		// TODO Auto-generated method stub
-		ArrayList<orderPO> orderList=new ArrayList<orderPO>();
-		orderList.add(new orderPO(checkInTime, checkOutTime, roomType, roomNumber,
+		ArrayList<OrderPO> orderList=new ArrayList<OrderPO>();
+		orderList.add(new OrderPO(checkInTime, checkOutTime, roomType, roomNumber,
 				promotion, discount, price));
 		return orderList;
 	}
 
 	@Override
-	public orderPO getOrder(String orderID) {
+	public OrderPO getOrder(String orderID) {
 		// TODO Auto-generated method stub
-		return new orderPO(checkInTime, checkOutTime, roomType, roomNumber,
+		return new OrderPO(checkInTime, checkOutTime, roomType, roomNumber,
 				promotion, discount, price);
 	}
 
 	@Override
-	public hotelPO getHotelInformat(String hotelID) {
+	public HotelPO getHotelInformat(String hotelID) {
 		// TODO Auto-generated method stub
-		return new hotelPO(hotelID, name, address, level, district);
+		return new HotelPO(hotelID, name, address, level, district);
 	}
 
 	@Override
-	public boolean updataOrder(String orderID, orderPO OR) {
+	public boolean updataOrder(String orderID, OrderPO OR) {
 		// TODO Auto-generated method stub
 		System.out.println("订单更新成功");
 		return true;
 	}
 
 	@Override
-	public boolean updataHotelInformat(String hotelID,hotelPO po) {
+	public boolean updataHotelInformat(String hotelID,HotelPO po) {
 		// TODO Auto-generated method stub
 		System.out.println("酒店信息更新成功");
 		return true;
 	}
 
 	@Override
-	public boolean check(String orderID, String memberID, String roomID,roomPO RO,int mark) {
+	public boolean check(String orderID, String memberID, String roomID,RoomPO RO,int mark) {
 		// TODO Auto-generated method stub
 		if(mark==1){
 			System.out.println("入住成功");

@@ -2,10 +2,10 @@ package stub;
 
 import java.util.ArrayList;
 
-import dataservice.memberData;
-import po.memberPO;
+import dataservice.MemberDataService;
+import po.MemberPO;
 
-public class memberData_stub implements memberData {
+public class MemberDataStub implements MemberDataService {
 
 	String memberID;
 	String name;
@@ -13,7 +13,7 @@ public class memberData_stub implements memberData {
 	int credit;
 	int phone;
 
-	public memberData_stub(String memberID, String name, String level, int credit, int phone) {
+	public MemberDataStub(String memberID, String name, String level, int credit, int phone) {
 		this.memberID=memberID;
 		this.name=name;
 		this.level=level;
@@ -22,13 +22,13 @@ public class memberData_stub implements memberData {
 	}
 	
 	@Override
-	public memberPO getMInformation(String memberID) {
+	public MemberPO getMInformation(String memberID) {
 		// TODO Auto-generated method stub
-		return new memberPO(memberID, name, level, credit, phone);
+		return new MemberPO(memberID, name, level, credit, phone);
 	}
 
 	@Override
-	public boolean saveMInformation(String memberID, memberPO M) {
+	public boolean saveMInformation(String memberID, MemberPO M) {
 		// TODO Auto-generated method stub
 		System.out.println("用户信息保存成功");
 		return true;
